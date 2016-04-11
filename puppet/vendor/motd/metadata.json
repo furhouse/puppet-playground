@@ -1,0 +1,41 @@
+{
+  "name": "CERNOps-motd",
+  "version": "2.0.0",
+  "author": "CERNOps",
+  "summary": "Manages entries in a /etc/motd file.",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/cernops/puppet-motd",
+  "project_page": "https://github.com/cernops/puppet-motd",
+  "issues_url": "https://github.com/cernops/puppet-motd/issues",
+  "description": "Manages entries in a /etc/motd file.",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/concat","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 3.0.0"}
+  ]
+}

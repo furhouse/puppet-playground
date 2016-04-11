@@ -1,0 +1,43 @@
+{
+  "name": "nvogel-ansible",
+  "version": "3.0.0",
+  "author": "nvogel",
+  "summary": "Ansible",
+  "license": "MIT",
+  "source": "https://github.com/nvogel/puppet-ansible",
+  "operatingsystem_support": [
+    {
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ],
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ],
+      "operatingsystem": "CentOS"
+    },
+    {
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ],
+      "operatingsystem": "Ubuntu"
+    }
+  ],
+  "description": "Orchestration of Puppet nodes with Ansible",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "project_page": "https://github.com/nvogel/puppet-ansible",
+  "issues_url": "https://github.com/nvogel/puppet-ansible/issues",
+  "dependencies": [
+    {"version_requirement":">= 4.2.2 <5.0.0","name":"puppetlabs/stdlib"}
+  ]
+}
