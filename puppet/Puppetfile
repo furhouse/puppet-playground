@@ -21,10 +21,3 @@ mod 'profiles',
   :git => 'https://github.com/furhouse/500k-profiles.git'
 mod 'roles',
   :git => 'https://github.com/furhouse/500k-roles.git'
-
-mod 'packages',
-  :git => 'https://github.com/furhouse/500k-packages.git'
-mod 'environments',
-  :git => 'https://github.com/furhouse/500k-environments.git'
-mod 'users',
-  :git => 'https://github.com/furhouse/500k-users.git'

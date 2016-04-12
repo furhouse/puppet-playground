@@ -33,7 +33,8 @@ Vagrant.configure(2) do |config|
     end
 
     master.vm.provision "shell", inline: "sudo r10k deploy environment -pv"
-    master.vm.provision "shell", inline: "sudo cp /vagrant/nodeclassifier.rb /etc/puppet/nodeclassifier.rb"
+    master.vm.provision "shell", inline: "sudo cp /vagrant/puppet/nodeclassifier.rb /etc/puppet/nodeclassifier.rb"
+    master.vm.provision "shell", inline: "sudo cp /vagrant/puppet/autosign.conf /etc/puppet/autosign.conf"
     master.vm.provision "shell", inline: "sudo /etc/init.d/apache2 restart"
     # master.vm.provision "shell", inline: "sudo puppet agent -tv --summarize"
   end
