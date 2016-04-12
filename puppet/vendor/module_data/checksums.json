@@ -1,7 +1,0 @@
-{
-  "Modulefile": "e32a29ad67d3e4e5674dffa59b960c58",
-  "README.md": "30c82d2cfc22edfafbc5d95b14af8a36",
-  "lib/hiera/backend/module_data_backend.rb": "112d621619c21af4caff024ccaef3829",
-  "lib/puppet/indirector/data_binding/hiera.rb": "9a67f431134c49f86fa686b116718806",
-  "metadata.json": "b0a116e1ba50806f24b6ad0824834f55"
-}
