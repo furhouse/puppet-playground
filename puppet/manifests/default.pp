@@ -2,7 +2,7 @@ class { '::puppet':
   server                => true,
   server_foreman        => false,
   server_reports        => 'store',
-  server_external_nodes => '',
+  server_external_nodes => '/etc/puppet/nodeclassifier.rb',
   server_environments   => [],
 }
 class { '::hiera':
@@ -16,7 +16,7 @@ class { '::r10k':
   version           => '1.5.1',
   sources           => {
     'puppet' => {
-      'remote'  => 'https://github.com/furhouse/500k-puppetcontrol.git',
+      'remote'  => 'https://github.com/furhouse/puppet-playground.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
     },
@@ -29,4 +29,3 @@ class { '::r10k':
   manage_modulepath => false,
 }
 
-# Class['::puppet'] -> Class['::hiera'] -> Class['::r10k']

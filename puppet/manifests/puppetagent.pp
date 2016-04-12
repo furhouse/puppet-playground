@@ -1,5 +1,4 @@
 class { '::puppet':
-  puppetmaster => 'puppetmaster.localdomain',
+  puppetmaster => 'vdc-puppetmaster1.localdomain',
   show_diff    => true,
-  listen       => true,
 }
