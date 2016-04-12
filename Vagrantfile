@@ -27,14 +27,17 @@ Vagrant.configure(2) do |config|
     # r10k plugin to deploy puppet modules
     master.r10k.puppet_dir = "puppet"
     master.r10k.puppetfile_path = "puppet/Puppetfile"
-    master.r10k.module_path = "puppet/vendor"
 
     # Provision the machine with the appliction
     master.vm.provision "puppet" do |puppet|
       puppet.manifests_path = "puppet/manifests"
       puppet.manifest_file  = "default.pp"
-      puppet.module_path = ["puppet/modules", "puppet/vendor"]
+      puppet.module_path = "puppet/modules"
     end
+
+    master.vm.provision "shell", inline: "sudo r10k deploy environment -pv"
+    # master.vm.provision "shell", inline: "sudo puppet agent -tv --summarize"
+
   end
 
   config.vm.define :vdc1web01 do |vdc1web01|
@@ -43,6 +46,14 @@ Vagrant.configure(2) do |config|
     vdc1web01.vm.hostname = "vdc1-web-01.localdomain"
     vdc1web01.vm.network "private_network", ip: "192.168.137.3"
     vdc1web01.vm.provision :hosts, :sync_hosts => true
+
+    # Provision the machine with the appliction
+    vdc1web01.vm.provision "puppet" do |puppet|
+      puppet.manifests_path = "puppet/manifests"
+      puppet.manifest_file  = "puppetagent.pp"
+      puppet.module_path = "puppet/modules"
+    end
+
   end
 
   config.vm.define :vdc2web01 do |vdc2web01|

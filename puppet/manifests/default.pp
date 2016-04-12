@@ -12,7 +12,7 @@ class { '::hiera':
     'common',
     ],
 }
-class { 'r10k':
+class { '::r10k':
   version           => '1.5.1',
   sources           => {
     'puppet' => {
@@ -28,3 +28,5 @@ class { 'r10k':
   },
   manage_modulepath => false,
 }
+
+# Class['::puppet'] -> Class['::hiera'] -> Class['::r10k']
